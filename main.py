@@ -26,9 +26,9 @@ for (index, row) in student_data_frame.iterrows():
 
 import pandas
 nato_data_frame = pandas.read_csv("nato_phonetic_alphabet.csv")
-for (index, row) in nato_data_frame.iterrows():
-    dict={row.letter: row.code}
-    print(dict)
+# for (index, row) in nato_data_frame.iterrows():
+dict={row.letter: row.code for (index, row) in nato_data_frame.iterrows()}
+print(dict)
     
     
 
